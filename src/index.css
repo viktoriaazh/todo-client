@@ -162,6 +162,8 @@ table.table-2 td {
 		display: block;
 		text-align: center;
 	}
+	.login-form button {
+		margin-top: 20px;
 }
 
 .icon-edit {
