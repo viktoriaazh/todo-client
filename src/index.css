@@ -1,0 +1,176 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(img/bg_1.jpeg) no-repeat;
+  background-size: 100%;
+  /*background: linear-gradient(45deg, #e6e9f0, #eef1f5);*/
+}
+
+body * + * {
+  margin-top: 1.5 em;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.site-nav {
+  display: flex;
+  padding: .5em;
+  padding-left: 0;
+  background-color: #07575B;
+  list-style-type: none;
+}
+
+.site-nav > li {
+  margin-top: 0;
+}
+
+.site-nav > li > a {
+  display: block;
+  padding: .5em 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.login-form input:not([type=checkbox]), .login-form input:not([type=radio]), .todo-form input:not([type=checkbox]), .todo-form input:not([type=radio]), .todo-form select:not([type=select]) {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 7px;
+}
+
+.login-form button, .todo-form button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  margin: 10px 20px;
+  margin-left: 0;
+  position: relative;
+  color: black;
+  border: 2px solid #66A5AD;
+  background: none;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.login-form button:before, .login-form button:after, .todo-form button:after, .todo-form button:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+}
+.login-form button:before, .todo-form button:before {
+  bottom: 0;
+  left: 0;
+  border-left: 2px solid #07575B;
+  border-top: 2px solid #07575B;
+  transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s;
+}
+.login-form button:after, .todo-form button:after {
+  top: 0;
+  right: 0;
+  border-right: 2px solid #07575B;
+  border-bottom: 2px solid #07575B;
+  transition: 0s ease opacity .4s, .2s ease width, .2s ease height .2s;
+}
+.login-form button:hover:before, 
+.login-form button:hover:after,
+.todo-form button:hover:after,
+.todo-form button:hover:before {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+.login-form button:hover:before, .todo-form button:hover:before {
+  transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s;
+}
+.login-form button:hover:after, .todo-form button:hover:after {
+  transition: 0s ease opacity .4s, .2s ease height .4s, .2s ease width .6s;
+}
+.login-form button:hover, .todo-form button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table.table-2 {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+table.table-2 tr {
+	background-color: #f8f8f8;
+}
+table.table-2 th, table.table-2 td {
+	text-align: left;
+    padding: 8px;
+  
+    
+}
+
+table.table-2 th{
+  font-weight: bold;
+  background-color:#66A5AD;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  text-align: center;
+}
+
+table.table-2 td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background-color: none;
+}
+
+@media screen and (max-width: 600px) {
+	table.table-2 tr{
+		display: block;
+	}
+	table.table-2 tr{
+		margin-bottom: 30px;
+	}
+	table.table-2 th, table.table-2 td{
+		display: block;
+		text-align: center;
+	}
+}
+
+.icon-edit {
+  color: #07575B;
+  font-size: 20px;
+  
+}
+.icon-delete {
+  color:#003B46;
+  font-size: 20px;
+  
+}
